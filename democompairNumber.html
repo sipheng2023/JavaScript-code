@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Compare Numbers</h1>
+    <script language="javascript" type="text/javascript">
+       //ການປຽບທຽບ: == === != !== < > <= >= 
+
+        let x = 10;
+        let y = 5;
+        console.log("x == y: " + (x == y)); // false
+        console.log("x === y: " + (x === y)); // false
+        console.log("x != y: " + (x != y)); // true
+        console.log("x !== y: " + (x !== y)); // true
+        console.log("x < y: " + (x < y)); // false
+        console.log("x > y: " + (x > y)); // true
+        console.log("x <= y: " + (x <= y)); // false
+        console.log("x >= y: " + (x >= y)); // true
+
+        let a = 10;
+        let b = "10";
+        console.log("a == b: " + (a == b)); // true 
+        console.log("a === b: " + (a === b)); // false
+// ທາງຕະກະ: && (AND) || (OR) ! (NOT)   ^ (XOR)
+        let p = true;
+        let q = false;
+        let r = p && q;
+        console.log("p && q: " + (p && q)); // false
+        console.log("p || q: " + (p || q)); // true
+        console.log("!p: " + (!p)); // false
+        console.log("!q: " + (!q)); // true
+        console.log("p ^ q: " + (p ^ q)); // true
+        console.log("p ^ p: " + (p ^ p)); // false
+        console.log("q ^ q: " + (q ^ q)); // false
+        console.log("p ^ !q: " + (p ^ !q)); // false
+        console.log("r: " + (r)); // false
+        console.log("r: " + (!r)); // true
+
+        // ການປຽບທຽບຄ່າຕ່າງໆ ແບບປະສົມ ລະຫວ່າງການປຽບທຽບເຊັ່ນ: (a > b) && (c < d) || (e == f)
+        let c = 15;
+        let d = 20;
+        let e = 25;
+        let f = 25;
+
+        console.log("(a > b) && (c < d): " + ((a > b) && (c < d))); // false
+        console.log("(a > b) || (c < d): " + ((a > b) || (c < d))); // true
+        console.log("(e == f): " + (e == f)); // true
+
+        
+
+    </script>   
+</body>
+</html>

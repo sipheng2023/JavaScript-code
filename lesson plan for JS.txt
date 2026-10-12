@@ -1,0 +1,321 @@
+# ແຜນການສອນ JavaScript ພື້ນຖານ
+
+## ພາບລວມຂອງຫຼັກສູດ
+- **ໄລຍະເວລາ:** 6 ຄາບ (ຄາບລະ 90 ນາທີ)
+- **ລະດັບ:** ເລີ່ມຕົ້ນ
+- **ຄວາມຮູ້ພື້ນຖານທີ່ຕ້ອງມີ:** ຄວາມຮູ້ພື້ນຖານ HTML/CSS
+- **ເປົ້າໝາຍ:** ນັກຮຽນຈະສາມາດຂຽນໂປແກຣມ JavaScript ພື້ນຖານ ແລະ ຈັດການໜ້າເວັບໄດ້
+
+---
+
+## ຄາບທີ 1: ຄວາມຮູ້ເບື້ອງຕົ້ນກ່ຽວກັບ JavaScript
+
+### ເປົ້າໝາຍ
+- ເຂົ້າໃຈວ່າ JavaScript ແມ່ນຫຍັງ ແລະ ເຮັດວຽກຢູ່ໃສ
+- ຂຽນ ແລະ ຮັນສະຄຣິບທຳອິດ
+- ໃຊ້ `console.log()` ແລະ ຄຳຄິດເຫັນ (comments)
+
+### ຫົວຂໍ້
+1. JavaScript ແມ່ນຫຍັງ? (ປຽບທຽບກັບ HTML/CSS)
+2. ການເພີ່ມ JS ເຂົ້າໃນ HTML: ແທັກ `<script>`, ໄຟລ໌ພາຍນອກ
+3. Developer Console (F12)
+4. ຄຳຄິດເຫັນ: `//` ແລະ `/* */`
+
+### ຕົວຢ່າງໂຄດ
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS ທຳອິດຂອງຂ້ອຍ</title>
+</head>
+<body>
+  <h1>ສະບາຍດີ JavaScript!</h1>
+
+  <script>
+    // ນີ້ແມ່ນຄຳຄິດເຫັນແຖວດຽວ
+    /* ນີ້ແມ່ນຄຳຄິດເຫັນ
+       ຫຼາຍແຖວ */
+
+    console.log("ສະບາຍດີຈາກ console!");
+    console.log("JavaScript ກຳລັງເຮັດວຽກ!");
+  </script>
+</body>
+</html>
+```
+
+### ແບບຝຶກຫັດ
+- ພິມຊື່, ອາຍຸ, ແລະ ວຽກອະດິເລກຂອງເຈົ້າລົງ console.
+
+---
+
+## ຄາບທີ 2: ຕົວປ່ຽນ ແລະ ປະເພດຂໍ້ມູນ
+
+### ເປົ້າໝາຍ
+- ປະກາດຕົວປ່ຽນດ້ວຍ `let`, `const`, `var`
+- ຈຳແນກປະເພດຂໍ້ມູນພື້ນຖານ
+- ໃຊ້ template literals
+
+### ຫົວຂໍ້
+1. ຄວາມແຕກຕ່າງລະຫວ່າງ `let`, `const`, `var`
+2. ປະເພດ: string, number, boolean, null, undefined
+3. ຕົວດຳເນີນການ `typeof`
+4. Template literals (ເຄື່ອງໝາຍ backtick)
+
+### ຕົວຢ່າງໂຄດ
+```javascript
+let name = "ອາລີ";        // string
+const age = 25;            // number
+let isStudent = true;      // boolean
+let empty = null;          // null
+let notSet;                // undefined
+
+console.log(typeof name);       // "string"
+console.log(typeof age);        // "number"
+console.log(typeof isStudent);  // "boolean"
+
+// Template literals
+let greeting = `ສະບາຍດີ, ຂ້ອຍຊື່ ${name} ແລະ ຂ້ອຍອາຍຸ ${age} ປີ.`;
+console.log(greeting);
+
+// const ບໍ່ສາມາດປ່ຽນຄ່າໄດ້
+// age = 30; // ຜິດພາດ!
+```
+
+### ແບບຝຶກຫັດ
+- ສ້າງຕົວປ່ຽນສຳລັບສິນຄ້າ: ຊື່, ລາຄາ, ມີສິນຄ້າ. ພິມສະຫຼຸບດ້ວຍ template literal.
+
+---
+
+## ຄາບທີ 3: ຕົວດຳເນີນການ ແລະ ການຄວບຄຸມການໄຫຼ
+
+### ເປົ້າໝາຍ
+- ໃຊ້ຕົວດຳເນີນການທາງເລກ, ການປຽບທຽບ, ແລະ ທາງຕະກະ
+- ຂຽນຄຳສັ່ງ `if/else` ແລະ `switch`
+
+### ຫົວຂໍ້
+1. ທາງເລກ: `+ - * / % **`
+2. ການປຽບທຽບ: `== === != !== < > <= >=`
+3. ທາງຕະກະ: `&& || !`
+4. `if`, `else if`, `else`, `switch`
+
+### ຕົວຢ່າງໂຄດ
+```javascript
+let score = 85;
+
+if (score >= 90) {
+  console.log("ຄະແນນ: A");
+} else if (score >= 80) {
+  console.log("ຄະແນນ: B");
+} else if (score >= 70) {
+  console.log("ຄະແນນ: C");
+} else {
+  console.log("ຄະແນນ: F");
+}
+
+// ຕົວຢ່າງ switch
+let day = 3;
+switch (day) {
+  case 1: console.log("ວັນຈັນ"); break;
+  case 2: console.log("ວັນອັງຄານ"); break;
+  case 3: console.log("ວັນພຸດ"); break;
+  default: console.log("ວັນອື່ນ");
+}
+
+// ຕົວດຳເນີນການທາງຕະກະ
+let age = 20;
+let hasID = true;
+if (age >= 18 && hasID) {
+  console.log("ອະນຸຍາດໃຫ້ເຂົ້າ");
+}
+```
+
+### ແບບຝຶກຫັດ
+- ຂຽນໂປແກຣມທີ່ກວດສອບວ່າຕົວເລກເປັນຄູ່ ຫຼື ຄີກ, ແລະ ເປັນບວກ ຫຼື ລົບ.
+
+---
+
+## ຄາບທີ 4: ວົນຊ້ຳ ແລະ ອາເຣ
+
+### ເປົ້າໝາຍ
+- ໃຊ້ວົນຊ້ຳດ້ວຍ `for`, `while`, `for...of`
+- ສ້າງ ແລະ ຈັດການອາເຣ
+
+### ຫົວຂໍ້
+1. `for`, `while`, `do...while`
+2. ວິທີການຂອງອາເຣ: `push`, `pop`, `length`, `indexOf`
+3. ວົນຊ້ຳ `for...of`
+4. `map`, `filter` (ແນະນຳ)
+
+### ຕົວຢ່າງໂຄດ
+```javascript
+// ວົນຊ້ຳ for ພື້ນຖານ
+for (let i = 1; i <= 5; i++) {
+  console.log("ນັບ: " + i);
+}
+
+// ອາເຣ
+let fruits = ["ໝາກໂປມ", "ໝາກກ້ວຍ", "ໝາກເຊີຣີ"];
+fruits.push("ໝາກສົ້ມ");
+console.log(fruits.length);    // 4
+
+// for...of
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+
+// map - ແປງແຕ່ລະລາຍການ
+let upperFruits = fruits.map(f => f.toUpperCase());
+console.log(upperFruits);
+
+// filter - ເກັບລາຍການທີ່ກົງກັນ
+let numbers = [1, 2, 3, 4, 5, 6];
+let evens = numbers.filter(n => n % 2 === 0);
+console.log(evens); // [2, 4, 6]
+```
+
+### ແບບຝຶກຫັດ
+- ໃຫ້ອາເຣຂອງຕົວເລກ, ພິມສະເພາະຕົວເລກທີ່ຫຼາຍກວ່າ 10 ແລະ ກຳລັງສອງຂອງມັນ.
+
+---
+
+## ຄາບທີ 5: ຟັງຊັນ
+
+### ເປົ້າໝາຍ
+- ປະກາດ ແລະ ເອີ້ນຟັງຊັນ
+- ເຂົ້າໃຈພາລາມິເຕີ, ຄ່າທີ່ສົ່ງກັບ, ແລະ scope
+- ໃຊ້ arrow functions
+
+### ຫົວຂໍ້
+1. ການປະກາດຟັງຊັນ vs ການສະແດງອອກ
+2. ພາລາມິເຕີ & ການສົ່ງກັບ
+3. Arrow functions
+4. ພາລາມິເຕີເລີ່ມຕົ້ນ
+
+### ຕົວຢ່າງໂຄດ
+```javascript
+// ການປະກາດຟັງຊັນ
+function add(a, b) {
+  return a + b;
+}
+console.log(add(3, 5)); // 8
+
+// ການສະແດງອອກຟັງຊັນ
+const multiply = function(a, b) {
+  return a * b;
+};
+
+// Arrow function
+const subtract = (a, b) => a - b;
+console.log(subtract(10, 4)); // 6
+
+// ພາລາມິເຕີເລີ່ມຕົ້ນ
+function greet(name = "ແຂກ") {
+  return `ສະບາຍດີ, ${name}!`;
+}
+console.log(greet());          // ສະບາຍດີ, ແຂກ!
+console.log(greet("ສົມ"));     // ສະບາຍດີ, ສົມ!
+
+// ຟັງຊັນກັບວົນຊ້ຳ
+function sumArray(arr) {
+  let total = 0;
+  for (let n of arr) total += n;
+  return total;
+}
+console.log(sumArray([1, 2, 3, 4])); // 10
+```
+
+### ແບບຝຶກຫັດ
+- ຂຽນຟັງຊັນ `isPrime(n)` ທີ່ສົ່ງກັບ true ຖ້າ n ເປັນຈຳນວນສະເພາະ.
+
+---
+
+## ຄາບທີ 6: ການຈັດການ DOM ແລະ ເຫດການ
+
+### ເປົ້າໝາຍ
+- ເລືອກອົງປະກອບ HTML ດ້ວຍ JavaScript
+- ປ່ຽນເນື້ອຫາ, ຮູບແບບ, ແລະ class
+- ຈັດການເຫດການ click ແລະ input
+
+### ຫົວຂໍ້
+1. `document.getElementById`, `querySelector`
+2. `textContent`, `innerHTML`, `style`
+3. `addEventListener`
+4. ການຈັດການຟອມແບບງ່າຍ
+
+### ຕົວຢ່າງໂຄດ
+```html
+<!DOCTYPE html>
+<html>
+<body>
+  <h1 id="title">ຫົວຂໍ້ເດີມ</h1>
+  <button id="changeBtn">ກົດຂ້ອຍ</button>
+  <input id="nameInput" placeholder="ໃສ່ຊື່">
+  <p id="output"></p>
+
+  <script>
+    // ເລືອກອົງປະກອບ
+    const title = document.getElementById("title");
+    const btn = document.getElementById("changeBtn");
+    const input = document.getElementById("nameInput");
+    const output = document.getElementById("output");
+
+    // ປ່ຽນຂໍ້ຄວາມ ແລະ ຮູບແບບ
+    title.textContent = "ຍິນດີຕ້ອນຮັບ!";
+    title.style.color = "blue";
+
+    // ເຫດການກົດ
+    btn.addEventListener("click", () => {
+      title.textContent = "ເຈົ້າໄດ້ກົດປຸ່ມແລ້ວ!";
+      title.style.color = "green";
+    });
+
+    // ເຫດການ input
+    input.addEventListener("input", (e) => {
+      output.textContent = `ສະບາຍດີ, ${e.target.value}!`;
+    });
+  </script>
+</body>
+</html>
+```
+
+### ແບບຝຶກຫັດ
+- ສ້າງຕົວນັບງ່າຍ: ປຸ່ມທີ່ເພີ່ມຕົວເລກທີ່ສະແດງຢູ່ໃນໜ້າເວັບ.
+
+---
+
+## ການປະເມີນ ແລະ ແນວຄວາມຄິດໂຄງການ
+
+### ການທົດສອບສັ້ນ (ຫຼັງແຕ່ລະຄາບ)
+- 5 ຄຳຖາມຫຼາຍຕົວເລືອກ + 1 ສິ່ງທ້າທາຍການຂຽນໂຄດ
+
+### ໂຄງການສຸດທ້າຍ (ເລືອກໜຶ່ງ)
+1. **ລາຍການວຽກ** — ເພີ່ມ/ລຶບວຽກດ້ວຍ DOM
+2. **ເຄື່ອງຄິດເລກງ່າຍ** — ໃຊ້ຟັງຊັນ ແລະ ເຫດການ
+3. **ແອັບແບບສອບຖາມ** — ອາເຣຄຳຖາມ, ຕິດຕາມຄະແນນ
+4. **ເກມທວາຍຕົວເລກ** — ວົນຊ້ຳ ແລະ ເງື່ອນໄຂ
+
+### ເກນການໃຫ້ຄະແນນ
+| ເກນ | ນ້ຳໜັກ |
+|----------|--------|
+| ເຮັດວຽກຕາມທີ່ຕ້ອງການ | 40% |
+| ຄວາມອ່ານງ່າຍຂອງໂຄດ | 20% |
+| ໃຊ້ແນວຄວາມຄິດທີ່ຕ້ອງການ | 25% |
+| ຄວາມຄິດສ້າງສັນ | 15% |
+
+---
+
+## ຄຳແນະນຳໃນການສອນ
+- **ຂຽນໂຄດສົດໆ** ທຸກຕົວຢ່າງ — ຢ່າພຽງແຕ່ສະແດງສະໄລ້
+- ສົ່ງເສີມໃຫ້ນັກຮຽນ **ທຳລາຍໂຄດ** ແລະ ເບິ່ງຂໍ້ຜິດພາດ
+- ໃຊ້ **browser console** ເປັນສະໜາມຫຼິ້ນ
+- ເສີມສ້າງດ້ວຍ **ສິ່ງທ້າທາຍປະຈຳວັນນ້ອຍໆ** (ເຊັ່ນ Codewars 8kyu)
+- ໃຊ້ການຂຽນໂຄດເປັນຄູ່ສຳລັບໂຄງການສຸດທ້າຍ
+
+## ແຫຼ່ງຂໍ້ມູນ
+- MDN Web Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+- JavaScript.info: https://javascript.info
+- freeCodeCamp: https://www.freecodecamp.org
+
+---
+
+ຕ້ອງການໃຫ້ຂ້ອຍຂະຫຍາຍຄາບໃດໜຶ່ງດ້ວຍແບບຝຶກຫັດເພີ່ມເຕີມ, ເພີ່ມວຽກບ້ານ, ຫຼື ສ້າງໂຄງຮ່າງສະໄລ້ສຳລັບຄາບໃດໜຶ່ງບໍ່?
